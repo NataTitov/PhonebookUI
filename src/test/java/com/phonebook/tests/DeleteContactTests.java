@@ -1,6 +1,7 @@
 package com.phonebook.tests;
 
-import org.openqa.selenium.By;
+import com.phonebook.models.Contact;
+import com.phonebook.models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -11,42 +12,32 @@ public class DeleteContactTests extends TestBase {
     @BeforeMethod
     public void precondition() {
         //login
-        clickOnLoginLink();
-        fillRegisterLoginForm("1a@1b.com", "Aa12345$");
-        clickOnLoginButton();
-        clickOnAdd();
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillRegisterLoginForm(new User().setEmail("1a@1b.com").setPassword("Aa12345$"));
+        app.getUser().clickOnLoginButton();
+        app.getContact().clickOnAdd();
         //add contact
-        fillContactForm("John", "Doe", "1234567890", "jk@kl.com", "123 Main St, New York, NY 10001", "test");
-        clickOnSaveButton();
+        app.getContact().fillContactForm(new Contact()
+                .setName("John")
+                .setLastName("Doe")
+                .setPhone("1234567890")
+                .setEmail("jk@kl.com")
+                .setAddress("123 Main St, New York, NY 10001")
+                .setDescription("test"));
+        app.getContact().clickOnSaveButton();
 
     }
     //test
     @Test
     public void deleteContactTest(){
-        int sizeBefor = sizeOfContacts();
+        int sizeBefor = app.getContact().sizeOfContacts();
         //click on the card
         //click on remove button
-        click(By.cssSelector(".contact-item_card__2SOIM"));
-        click(By.xpath("//button[.='Remove']"));
+        app.getContact().deleteContactFromTest();
         //verify contact is deleted(by size)
-        pause(1000);
-        int sizeAfter = sizeOfContacts();
+        app.getContact().pause(1000);
+        int sizeAfter = app.getContact().sizeOfContacts();
         Assert.assertEquals(sizeAfter, sizeBefor - 1);
-
-    }
-
-    public int sizeOfContacts() {
-        if(isElementLocator(By.cssSelector(".contact-item_card__2SOIM"))){
-            return driver.findElements(By.cssSelector(".contact-item_card__2SOIM")).size();
-        }
-        return 0;
-    }
-    public void pause(int millis){
-        try {
-            Thread.sleep(millis);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 
 }

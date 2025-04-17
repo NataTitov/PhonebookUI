@@ -1,5 +1,6 @@
 package com.phonebook.tests;
 
+import com.phonebook.models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,17 +9,25 @@ public class LoginTests extends TestBase {
     @Test
     public void loginPositiveTest() {
         //click on Login Link
-        clickOnLoginLink();
+        app.getUser().clickOnLoginLink();
 
         //enter Email to email field
         //click, ochishenie, dannie
-        fillRegisterLoginForm("1a@1b.com", "Aa12345$");
+        app.getUser().fillRegisterLoginForm(new User().setEmail("1a@1b.com").setPassword("Aa12345$"));
 
         //click Login button
-        clickOnLoginButton();
+        app.getUser().clickOnLoginButton();
 
         //verify SingOut Link is displayed
-        Assert.assertTrue(isSignOutButtonPresent());
+        Assert.assertTrue(app.getUser().isSignOutButtonPresent());
+    }
+
+    @Test
+    public void loginNegativeWithoutTest() {
+        app.getUser().clickOnLoginLink();
+        app.getUser().fillRegisterLoginForm(new User().setPassword("Aa12345$"));
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isAlertDisplayed());
     }
 
 }
