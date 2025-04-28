@@ -13,4 +13,8 @@ public class HomePageHelper extends BaseHelper {
         //XPath -> //div[2]/div/div/h1
         return isElementLocator(By.cssSelector("div:nth-child(2)>div>div>h1"));
     }
+
+    public void clickOnHomeLink() {
+        click(By.cssSelector("[href='/home']"));
+    }
 }

@@ -1,12 +1,21 @@
 package com.phonebook.tests;
 
+import com.phonebook.data.UserData;
 import com.phonebook.models.User;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class CreateAccountTests extends TestBase {
-//останавливает выполнение теста при первой ошибке
+    @BeforeMethod
+    public void Precondition(){
+        if (!app.getUser().isLoginLinkPresent()) {
+            app.getUser().clickOnSignOutButton();
+        }
+    }
+
+    //останавливает выполнение теста при первой ошибке
     SoftAssert softAssert = new SoftAssert();
 
     //int i = (int) ((System.currentTimeMillis() / 1000) % 3600);
@@ -20,7 +29,7 @@ public class CreateAccountTests extends TestBase {
         //click, ochishenie, dannie
         //randomniy email
         //type(By.name("email"), "1a" + i + "@1b.com");
-        app.getUser().fillRegisterLoginForm(new User().setEmail("1a@1b.com").setPassword("Aa12345$"));
+        app.getUser().fillRegisterLoginForm(new User().setEmail(UserData.EMAIL).setPassword(UserData.PASSWORD));
 
         //click on Registration button
         app.getUser().clickOnRegistratoin();
@@ -38,7 +47,7 @@ public class CreateAccountTests extends TestBase {
 
         //enter Email to email field
         //click, ochishenie, dannie
-        app.getUser().fillRegisterLoginForm(new User().setEmail("1a@1b.com").setPassword("Aa12345$"));
+        app.getUser().fillRegisterLoginForm(new User().setEmail(UserData.EMAIL).setPassword(UserData.EMAIL));
 
         //click on Registration button
         app.getUser().clickOnRegistratoin();
