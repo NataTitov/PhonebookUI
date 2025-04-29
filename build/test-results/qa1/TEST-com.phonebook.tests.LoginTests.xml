@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.phonebook.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-28T09:42:57" hostname="DESKTOP-OLNSQL4" time="1.459">
+  <properties/>
+  <testcase name="loginNegativeWithoutTest" classname="com.phonebook.tests.LoginTests" time="1.459"/>
+  <system-out><![CDATA[11:42:57.869 [Test worker] INFO  com.phonebook.tests.TestBase -- Start test: loginNegativeWithoutTest[]
+11:42:57.879 [Test worker] INFO  com.phonebook.utils.MyListener -- Before find elements -> By.cssSelector: [href='/login']
+11:42:57.880 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:57.948 [Test worker] INFO  com.phonebook.utils.MyListener -- List size -> 1
+11:42:57.952 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:57.954 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator will find -> By.cssSelector: [href='/login']
+11:42:57.954 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:57.966 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator is -> By.cssSelector: [href='/login']
+11:42:57.966 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.041 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator will find -> By.name: password
+11:42:58.041 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.058 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator is -> By.name: password
+11:42:58.058 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.117 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator will find -> By.name: password
+11:42:58.118 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.129 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator is -> By.name: password
+11:42:58.129 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.156 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator will find -> By.name: password
+11:42:58.156 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.165 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator is -> By.name: password
+11:42:58.166 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.228 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator will find -> By.name: login
+11:42:58.229 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.245 [Test worker] INFO  com.phonebook.utils.MyListener -- The locator is -> By.name: login
+11:42:58.246 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.326 [Test worker] INFO  com.phonebook.utils.MyListener -- The test has a problem
+11:42:58.326 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.326 [Test worker] INFO  com.phonebook.utils.MyListener -- Method -> alert
+11:42:58.326 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.328 [Test worker] INFO  com.phonebook.utils.MyListener -- TargetException -> org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: MicrosoftEdge=135.0.3179.98)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9ccf07f4cad261d156ca3f5e36d6b1c4, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 135.0.3179.98, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59812}, msedge: {msedgedriverVersion: 135.0.3179.98 (4215a10badb6..., userDataDir: C:\Users\patah\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59812/devtoo..., se:cdpVersion: 135.0.3179.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9ccf07f4cad261d156ca3f5e36d6b1c4
+11:42:58.328 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.329 [Test worker] INFO  com.phonebook.utils.MyListener -- Object target-> org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator@14823f76
+11:42:58.329 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.839 [Test worker] INFO  com.phonebook.utils.MyListener -- The test has a problem
+11:42:58.839 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.839 [Test worker] INFO  com.phonebook.utils.MyListener -- Method -> alert
+11:42:58.839 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.840 [Test worker] INFO  com.phonebook.utils.MyListener -- TargetException -> org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: MicrosoftEdge=135.0.3179.98)
+Build info: version: '4.30.0', revision: '509c7f17cc*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9ccf07f4cad261d156ca3f5e36d6b1c4, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 135.0.3179.98, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59812}, msedge: {msedgedriverVersion: 135.0.3179.98 (4215a10badb6..., userDataDir: C:\Users\patah\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59812/devtoo..., se:cdpVersion: 135.0.3179.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9ccf07f4cad261d156ca3f5e36d6b1c4
+11:42:58.840 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:58.840 [Test worker] INFO  com.phonebook.utils.MyListener -- Object target-> org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator@6917bb4
+11:42:58.840 [Test worker] INFO  com.phonebook.utils.MyListener -- ==========================================
+11:42:59.416 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: loginNegativeWithoutTest
+11:42:59.416 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+11:42:59.417 [Test worker] INFO  com.phonebook.tests.TestBase -- =================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
